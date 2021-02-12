@@ -1,0 +1,23 @@
+.header{
+    background: #D06A50;
+    height: 120px;
+}
+.right_sidebar{
+    border-left: 3px solid black;
+    height: 600px;
+}
+.left_sidebar{
+    border-right: 3px solid black;
+    height: 600px;
+}
+.box_state{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+}
+.link_item{
+    font-size: 20px;
+    color: black!important;
+    text-decoration: none;
+}
