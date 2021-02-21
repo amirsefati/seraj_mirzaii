@@ -46,7 +46,7 @@
 
             <div class="row mt-4 mb-3">
                 <div class="col-md-12" style="text-align:center">
-                    <button @click="submitdata" class="btn btn-success">ارسال اطلاعات</button>
+                    <button @click="submitdata" class="btn btn-success">ثبت امضا</button>
                 </div>
             </div>
         </div>

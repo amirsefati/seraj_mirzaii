@@ -2380,11 +2380,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _img_01_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/01.jpg */ "./resources/js/components/img/01.jpg");
 // Imports
 
+
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_01_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header{\r\n    background: #D06A50;\r\n    height: 120px;\r\n}\r\n.right_sidebar{\r\n    border-left: 3px solid black;\r\n    height: 600px;\r\n}\r\n.left_sidebar{\r\n    border-right: 3px solid black;\r\n    height: 600px;\r\n}\r\n.box_state{\r\n    text-align: center;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    border: 1px solid black;\r\n}\r\n.link_item{\r\n    font-size: 20px;\r\n    color: black!important;\r\n    text-decoration: none;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header{\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: contain;\r\n    height: 160px;\r\n}\r\n.right_sidebar{\r\n    height: 600px;\r\n}\r\n.left_sidebar{\r\n    height: 600px;\r\n}\r\n.box_state{\r\n    text-align: center;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n}\r\n.link_item{\r\n    font-size: 20px;\r\n    color: white!important;\r\n    text-decoration: none;\r\n    background: #4EA699;\r\n    padding: 10px 15px;\r\n    border-radius: 10px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2464,6 +2470,65 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
+/***/ "./resources/js/components/img/01.jpg":
+/*!********************************************!*\
+  !*** ./resources/js/components/img/01.jpg ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/01.jpg?6fcc7ba0a02399d5374a6d8291159e31");
 
 /***/ }),
 
@@ -3296,19 +3361,28 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-8 col-10" }, [
           _c("div", { staticClass: "row mt-4" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c("div", {
+            _c(
+              "div",
+              {
+                staticClass: "col-md-12 p-4",
                 staticStyle: {
-                  height: "500px",
-                  overflow: "auto",
-                  padding: "5px"
-                },
-                domProps: { innerHTML: _vm._s(_vm.document_file) }
-              })
-            ])
+                  "box-shadow": "5px 5px 10px 3px rgba(0,0,0,0.09)"
+                }
+              },
+              [
+                _c("div", {
+                  staticStyle: {
+                    height: "450px",
+                    overflow: "auto",
+                    padding: "5px"
+                  },
+                  domProps: { innerHTML: _vm._s(_vm.document_file) }
+                })
+              ]
+            )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row mt-3" }, [
+          _c("div", { staticClass: "row mt-4" }, [
             _c(
               "div",
               { staticClass: "col-md-12" },
@@ -3670,7 +3744,7 @@ var render = function() {
                   staticClass: "btn btn-success",
                   on: { click: _vm.submitdata }
                 },
-                [_vm._v("ارسال اطلاعات")]
+                [_vm._v("ثبت امضا")]
               )
             ]
           )
@@ -3869,7 +3943,7 @@ var render = function() {
                   staticClass: "btn btn-success",
                   on: { click: _vm.submitdata }
                 },
-                [_vm._v("ارسال اطلاعات")]
+                [_vm._v("ثبت امضا")]
               )
             ]
           )
@@ -4040,7 +4114,7 @@ var render = function() {
                   staticClass: "btn btn-success",
                   on: { click: _vm.submitdata }
                 },
-                [_vm._v("ارسال اطلاعات")]
+                [_vm._v(" ثبت امضا")]
               )
             ]
           )

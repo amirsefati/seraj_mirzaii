@@ -19,12 +19,12 @@
 
                 <div class="col-md-8 col-10">
                     <div class="row mt-4">
-                        <div class="col-md-12">
-                            <div style="height:500px; overflow: auto;padding:5px" v-html="document_file"></div>
+                        <div class="col-md-12 p-4" style="box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.09);">
+                            <div style="height:450px; overflow: auto;padding:5px" v-html="document_file"></div>
                         </div>
                     </div>
 
-                    <div class="row mt-3">
+                    <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="row mb-3">
                                 <div class="col-md-4 box_state">

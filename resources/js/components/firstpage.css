@@ -1,23 +1,24 @@
 .header{
-    background: #D06A50;
-    height: 120px;
+    background-image: url('./img/01.jpg');
+    background-size: contain;
+    height: 160px;
 }
 .right_sidebar{
-    border-left: 3px solid black;
     height: 600px;
 }
 .left_sidebar{
-    border-right: 3px solid black;
     height: 600px;
 }
 .box_state{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 1px solid black;
 }
 .link_item{
     font-size: 20px;
-    color: black!important;
+    color: white!important;
     text-decoration: none;
+    background: #4EA699;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
