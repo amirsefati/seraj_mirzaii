@@ -69,7 +69,6 @@ export default {
         .then((res)=>{
             this.document_file = res.data
         })
-        
     },
     data:function(){
         return{
